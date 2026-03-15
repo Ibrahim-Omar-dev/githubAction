@@ -2,7 +2,7 @@ name: first workflow
 
 on:
   push:
-    path:
+    paths:
       - "index.html"
 
 jobs:
