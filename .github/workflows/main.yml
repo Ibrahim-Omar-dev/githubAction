@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    path:
+      - "index.html"
 
 jobs:
   example-job:
@@ -13,6 +15,6 @@ jobs:
       - name: print a welcome message
         run: echo "welcome to our first github action workflow"
       - name: checkout repository
-        uses: actions/checkout@v6.0.2 
+        uses: actions/checkout@v6.0.2
       - name: list repository
         run: ls -la
