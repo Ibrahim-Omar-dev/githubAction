@@ -1,0 +1,12 @@
+name: repo dispatch workflow
+
+on:
+  repository_dispatch:
+    types: [build, deploy]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Repository dispatch triggered"
+    
