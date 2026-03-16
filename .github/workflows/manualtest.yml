@@ -4,6 +4,14 @@ on:
       name:
           description: "Hema"
           required: true
+      environment:
+           description: choose envir
+           required: true
+           type: choice
+           options:
+             - dev
+             - test
+             - prod
 jobs:
   test:
      runs-on: ubuntu-latest
