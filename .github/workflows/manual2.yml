@@ -2,7 +2,7 @@ name: repo dispatch workflow
 
 on:
   repository_dispatch:
-    types: [build, deploy]
+    types: [run-postman]
 
 jobs:
   test:
