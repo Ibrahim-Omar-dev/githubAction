@@ -6,5 +6,11 @@ jobs:
      steps:
        - name: set variables
          run: echo "NAME=Ibrahim">> $GITHUB_ENV
+         
        - name: print variables
          run: echo ${{env.NAME}}
+         
+       - id: step3
+         run: echo ""value=123">>GITHUB_OUTPUT
+         
+       - run: echo ${{steps.step3.outputs.value}} 
