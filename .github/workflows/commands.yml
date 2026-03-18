@@ -7,4 +7,4 @@ jobs:
        - name: set variables
          run: echo "NAME=Ibrahim">> $GITHUB_ENV
        - name: print variables
-         run: echo $NAME
+         run: echo ${{env.NAME}}
