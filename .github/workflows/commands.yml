@@ -25,3 +25,11 @@ jobs:
           if [[ "$dep" == "true" ]]; then
             echo "::warning::something wrong"
           fi
+
+      - name: add notice
+        run: echo "::notice::this is notice"
+
+      - name: mask secret
+        run: echo "::add-mask::password"
+      
+        
