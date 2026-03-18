@@ -1,16 +1,27 @@
 on: 
   workflow_dispatch:
+
 jobs:
   test:
-     runs-on: ubuntu-latest
-     steps:
-       - name: set variables
-         run: echo "NAME=Ibrahim">> $GITHUB_ENV
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: set variables
+        run: echo "NAME=Ibrahim" >> $GITHUB_ENV
          
-       - name: print variables
-         run: echo ${{env.NAME}}
+      - name: print variables
+        run: echo ${{ env.NAME }}
          
-       - id: step3
-         run: echo ""value=123">>GITHUB_OUTPUT
+      - id: step3
+        run: echo "value=123" >> $GITHUB_OUTPUT
          
-       - run: echo ${{steps.step3.outputs.value}} 
+      - run: echo ${{ steps.step3.outputs.value }}
+
+      - name: check dep
+        run: |
+          dep=true
+
+          if [[ "$dep" == "true" ]]; then
+            echo "::warning::something wrong"
+          fi
