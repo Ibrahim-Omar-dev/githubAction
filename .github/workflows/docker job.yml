@@ -1,0 +1,18 @@
+name: docker job
+
+on:
+  workflow_dispatch
+
+jobs:
+  myjob:
+    runs-on: ubuntu-latest
+
+    container:
+      image: python:3.11
+
+    steps:
+      - name: check python
+        run: python --version
+
+      - name: print
+        run: echo hello
